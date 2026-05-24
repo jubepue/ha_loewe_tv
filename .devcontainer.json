@@ -11,13 +11,14 @@
             "onAutoForward": "notify"
         }
     },
-    "privileged": true,
     "runArgs": [
-        "--network=host"
+        "--network=host",
+        "--privileged",
+        "--cap-add=NET_ADMIN",
+        "--cap-add=NET_RAW"
     ],
-    "capAdd": [
-        "NET_ADMIN",
-        "NET_RAW"
+    "mounts": [
+        "type=bind,source=/run/dbus,target=/run/dbus,readonly"
     ],
     "customizations": {
         "vscode": {
