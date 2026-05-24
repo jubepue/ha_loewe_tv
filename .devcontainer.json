@@ -11,11 +11,13 @@
             "onAutoForward": "notify"
         }
     },
+    "privileged": true,
+    "capAdd": [
+        "NET_ADMIN",
+        "NET_RAW"
+    ],
     "runArgs": [
-        "--network=host",
-        "--privileged",
-        "--cap-add=NET_ADMIN",
-        "--cap-add=NET_RAW"
+        "--network=host"
     ],
     "mounts": [
         "type=bind,source=/run/dbus,target=/run/dbus,readonly"
