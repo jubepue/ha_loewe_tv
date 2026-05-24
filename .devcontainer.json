@@ -11,8 +11,13 @@
             "onAutoForward": "notify"
         }
     },
+    "privileged": true,
     "runArgs": [
         "--network=host"
+    ],
+    "capAdd": [
+        "NET_ADMIN",
+        "NET_RAW"
     ],
     "customizations": {
         "vscode": {
