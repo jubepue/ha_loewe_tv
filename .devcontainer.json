@@ -11,12 +11,12 @@
             "onAutoForward": "notify"
         }
     },
-    "privileged": true,
     "capAdd": [
         "NET_ADMIN",
         "NET_RAW"
     ],
     "runArgs": [
+        "--privileged",
         "--network=host"
     ],
     "mounts": [
